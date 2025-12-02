@@ -447,7 +447,7 @@ const navItems = [
     { id: 'studyGroup', label: '스터디 그룹', icon: Users },    // 1. 스터디 그룹
     { id: 'liveQuiz', label: '실시간 퀴즈', icon: Zap },        // 2. 실시간 퀴즈
     { id: 'quiz', label: '퀴즈', icon: BookOpen },             // 3. 퀴즈 (메인/중앙)
-    { id: 'errorNote', label: '오답 노트', icon: Notebook },  // 4. 오답 노트 (아이콘 이름 수정)
+    { id: 'errorNote', label: '오답 노트', icon: List },  // 4. 오답 노트 (아이콘 이름 수정)
     { id: 'meal', label: '급식 알리미', icon: Utensils },     // 5. 급식 알리미
 ];
 
