@@ -11,7 +11,7 @@ import {
     serverTimestamp, addDoc, arrayUnion, arrayRemove, deleteDoc
 } from 'firebase/firestore';
 
-// Lucide React Icons (NotebookText -> Notebook으로 수정)
+// Lucide React Icons
 import { BookOpen, Utensils, Zap, Notebook, Users, HelpCircle, CornerDownLeft, Send, Loader2, Bot, LogIn, User, X, Sparkles, Play, Square, List, CheckCircle, XCircle, ChevronDown, LogOut } from 'lucide-react';
 
 // --- 전역 변수 설정 (Canvas 환경에서 제공됨) ---
@@ -72,7 +72,8 @@ const fetchWithRetry = async (url, options, retries = 3) => {
  * Gemini API를 호출하여 텍스트를 생성합니다.
  */
 const generateGeminiContent = async (userQuery, base64Image = null) => {
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
+    // [수정된 부분]: 문자열 끝을 정확히 닫고 URL 완성
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${GEMINI_API_KEY}`; 
 
     const contents = [{ 
         parts: base64Image ? [
