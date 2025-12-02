@@ -11,8 +11,8 @@ import {
     serverTimestamp, addDoc, arrayUnion, arrayRemove, deleteDoc
 } from 'firebase/firestore';
 
-// Lucide React Icons
-import { BookOpen, Utensils, Zap, NotebookText, Users, HelpCircle, CornerDownLeft, Send, Loader2, Bot, LogIn, User, X, Sparkles, Play, Square, List, CheckCircle, XCircle, ChevronDown, LogOut } from 'lucide-react';
+// Lucide React Icons (NotebookText -> Notebook으로 수정)
+import { BookOpen, Utensils, Zap, Notebook, Users, HelpCircle, CornerDownLeft, Send, Loader2, Bot, LogIn, User, X, Sparkles, Play, Square, List, CheckCircle, XCircle, ChevronDown, LogOut } from 'lucide-react';
 
 // --- 전역 변수 설정 (Canvas 환경에서 제공됨) ---
 const appId = 'sangam-study-planner'; // 프로젝트 ID 대신 고유 ID 사용 (규칙에서 설정한 값)
