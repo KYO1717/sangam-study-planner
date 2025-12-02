@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import ReactDOM from 'react-dom/client'; // ReactDOM import 추가
 
 // Firebase Imports (필수 라이브러리)
 import { initializeApp } from 'firebase/app';
