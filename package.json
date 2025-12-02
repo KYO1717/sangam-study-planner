@@ -6,7 +6,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "lucide-react": "^0.300.0",
-    "firebase": "^10.7.1"
+    "firebase": "^10.7.1",
+    "react-scripts": "5.0.1" 
+    
+    // NOTE: 빌드 도구인 react-scripts를 dependencies에 명시적으로 포함하여
+    // Netlify가 프로덕션 빌드 환경에서 이 도구를 설치하도록 보장합니다.
   },
   "scripts": {
     "start": "react-scripts start",
