@@ -12,7 +12,7 @@ import {
 } from 'firebase/firestore';
 
 // Lucide React Icons
-import { BookOpen, Utensils, Zap, Notebook, Users, HelpCircle, CornerDownLeft, Send, Loader2, Bot, LogIn, User, X, Sparkles, Play, Square, List, CheckCircle, XCircle, ChevronDown, LogOut } from 'lucide-react';
+import { BookOpen, Utensils, Zap, NotebookText, Users, HelpCircle, CornerDownLeft, Send, Loader2, Bot, LogIn, User, X, Sparkles, Play, Square, List, CheckCircle, XCircle, ChevronDown, LogOut } from 'lucide-react';
 
 // --- 전역 변수 설정 (Canvas 환경에서 제공됨) ---
 const appId = 'sangam-study-planner'; // 프로젝트 ID 대신 고유 ID 사용 (규칙에서 설정한 값)
@@ -446,7 +446,7 @@ const navItems = [
     { id: 'studyGroup', label: '스터디 그룹', icon: Users },    // 1. 스터디 그룹
     { id: 'liveQuiz', label: '실시간 퀴즈', icon: Zap },        // 2. 실시간 퀴즈
     { id: 'quiz', label: '퀴즈', icon: BookOpen },             // 3. 퀴즈 (메인/중앙)
-    { id: 'errorNote', label: '오답 노트', icon: Notebook },  // 4. 오답 노트
+    { id: 'errorNote', label: '오답 노트', icon: NotebookText },  // 4. 오답 노트 (아이콘 이름 수정)
     { id: 'meal', label: '급식 알리미', icon: Utensils },     // 5. 급식 알리미
 ];
 
@@ -1693,7 +1693,7 @@ const App = ({ user, isAuthenticated }) => {
                  alert("로그인 팝업이 차단되었습니다. 브라우저 설정에서 팝업 차단을 해제해 주세요.");
             } else if (error.code === 'auth/unauthorized-domain') {
                  // 최종 오류 메시지 확인
-                 alert("Google 로그인 실패: Firebase Console 또는 Google Cloud Console에 현재 도메인이 '승인된 JavaScript 원본'으로 등록되지 않았습니다.");
+                 alert("Google 로그인 실패: 현재 도메인이 Google에 등록되지 않았거나 등록 정보가 부정확합니다.");
             } else {
                  alert("Google 로그인에 실패했습니다.");
             }
